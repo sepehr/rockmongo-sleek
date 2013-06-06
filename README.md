@@ -1,4 +1,3 @@
-rockmongo-sleek
-===============
+#RockMongo Sleek Theme
 
-Sleek theme for RockMongo administration tool.
+Sleek modern-looking theme for RockMongo administration tool, still under development.
