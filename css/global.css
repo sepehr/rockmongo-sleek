@@ -289,3 +289,12 @@ table th {
   color: #666;
   font: 11px Verdana, Dejavu Sans, sans-serif !important;
 }
+.record a[href="#page_top"] {
+  background: #efefef;
+  left: 3px;
+  padding: 3px 5px;
+  position: relative;
+}
+.record:hover a[href="#page_top"] {
+  background-color: #d8eaf2;
+}
