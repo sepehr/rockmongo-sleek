@@ -149,8 +149,9 @@ img {
   padding: 1px;
 }
 .top a {
-  color: #666;
+  color: #555;
   padding: 0 10px;
+  text-shadow: 0 1px #fff;
 }
 .top .left {
   float: left;
@@ -170,10 +171,11 @@ img {
 }
 .manual a,
 .server-menu a {
-  color: #666;
+  color: #555;
   display: block;
   font: 13px Helvetica, Arial, Freesans, Clean, sans-serif;
   padding: 7px;
+  text-shadow: 0 1px #fff;
 }
 .manual a:hover,
 .server-menu a:hover {
