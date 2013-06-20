@@ -220,3 +220,16 @@ img {
   padding-right: 3px;
   position: absolute;
 }
+
+/* Tables */
+table th {
+  background-color: #e5e5e5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(235, 235, 235)), to(rgb(229, 229, 229)));
+  background-image: -webkit-linear-gradient(top, rgb(235, 235, 235), rgb(229, 229, 229));
+  background-image: -moz-linear-gradient(top, rgb(235, 235, 235), rgb(229, 229, 229));
+  background-image: -o-linear-gradient(top, rgb(235, 235, 235), rgb(229, 229, 229));
+  background-image: -ms-linear-gradient(top, rgb(235, 235, 235), rgb(229, 229, 229));
+  background-image: linear-gradient(top, rgb(235, 235, 235), rgb(229, 229, 229));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ebebeb', EndColorStr='#e5e5e5');
+  border-top: 1px solid #fafafa;
+}
