@@ -300,3 +300,27 @@ textarea,
 .record:hover a[href="#page_top"] {
   background-color: #d8eaf2;
 }
+
+/* Pagination */
+.page {
+  border-bottom: 1px solid #f3f3f3;
+  border-top: 1px solid #f3f3f3;
+  margin: 20px 2px;
+  padding: 10px 0;
+  text-align: center;
+  font: 11px Verdana, Dejavu Sans, sans-serif !important;
+}
+.page a {
+  color: #666;
+  margin: 0 5px;
+  padding: 2px 3px;
+  font: 11px Verdana, Dejavu Sans, sans-serif !important;
+}
+.page span a {
+  color: #444;
+  background: #d8eaf2;
+  border-radius: 3px;
+  font-weight: normal;
+  padding: 2px 7px;
+  text-shadow: 0 1px #fff;
+}
