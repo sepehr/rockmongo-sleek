@@ -271,6 +271,7 @@ table th {
 .record table:hover {
   background: #fff !important;
 }
+textarea,
 .record_row,
 .record_row * {
   font: 12px Consolas, Bitstream Vera Sans Mono, monospace !important;
