@@ -161,31 +161,60 @@ img {
 }
 
 /* Dropdown menus */
+#field_menu {
+  position: absolute !important;
+}
+#field_menu a {
+  font-size: 11px !important;
+  padding: 5px !important;
+}
+.menu,
 .manual,
-.server-menu {
+.doc_menu,
+.server-menu,
+#field_menu {
   background: #efefef !important;
   border: 1px solid #fafafa !important;
   box-shadow: 0 1px 1px #aaa;
   margin-top: 5px !important;
   padding: 0 !important;
 }
+.menu a,
 .manual a,
-.server-menu a {
+.doc_menu a,
+.server-menu a,
+#field_menu a {
   color: #555;
   display: block;
   font: 13px Helvetica, Arial, Freesans, Clean, sans-serif;
   padding: 7px;
   text-shadow: 0 1px #fff;
 }
+.menu a:hover,
 .manual a:hover,
-.server-menu a:hover {
-  background: #f7f7f7;
+.doc_menu a:hover,
+.server-menu a:hover,
+#field_menu a:hover {
+  background: #fafafa !important;
 }
+.menu br,
 .manual br,
-.server-menu br {
+.doc_menu br,
+.server-menu br,
+#field_menu br {
   display: none;
 }
 
+.menu span,
+.manual span,
+.doc_menu span,
+.server-menu span,
+#field_menu span {
+  border-bottom: 1px solid #fff;
+  display: block;
+  height: 1px;
+  overflow: hidden;
+}
 /* Top resizer */
 .ui-layout-resizer-north-open {
   background: #eaeaea !important;
