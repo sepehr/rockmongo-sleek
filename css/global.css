@@ -160,7 +160,7 @@ img {
   float: right;
 }
 
-/* Top dropdown menus */
+/* Dropdown menus */
 .manual,
 .server-menu {
   background: #efefef !important;
@@ -205,7 +205,7 @@ img {
 }
 
 /* Menu */
-.menu, #field_menu, .doc_menu {
+/*.menu, #field_menu, .doc_menu {
   background-color: #eee;
   border-bottom: 2px #ccc solid;
   border-left: 1px #ccc solid;
@@ -219,7 +219,7 @@ img {
   padding-left: 3px;
   padding-right: 3px;
   position: absolute;
-}
+}*/
 
 /* Tables */
 table th {
@@ -232,4 +232,11 @@ table th {
   background-image: linear-gradient(top, rgb(235, 235, 235), rgb(229, 229, 229));
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ebebeb', EndColorStr='#e5e5e5');
   border-top: 1px solid #fafafa;
+}
+
+/* Records */
+.record_row,
+.record_row * {
+  font: 12px Consolas, Bitstream Vera Sans Mono, monospace !important;
+  font-style: italic;
 }
