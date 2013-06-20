@@ -52,7 +52,7 @@ blockquote {
   padding: 0px;
 }
 .operation {
-  border-bottom: 1px #999 solid;
+  border-bottom: 1px #efefef solid;
   margin-bottom: 5px;
   padding: 3px;
 }
@@ -274,14 +274,15 @@ table th {
 .record_row,
 .record_row * {
   font: 12px Consolas, Bitstream Vera Sans Mono, monospace !important;
-  font-style: italic;
+  font-style: italic !important;
+  line-height: 18px !important;
 }
 .record tr > td[width="50"] {
   color: #efefef;
   font-family: Aller, Georgia, sans-serif;
   font-style: italic;
-  font-size: 28px;
-  /* @TODO: Fix high indexes */
+  font-size: 22px;
+  /* @TODO: Fix */
   max-width: 105px;
   overflow: hidden;
 }
