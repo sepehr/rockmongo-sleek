@@ -28,7 +28,7 @@
                 width:100px;
             	z-index:10000;
             }
-            
+
             #right-pane { padding-left:10px }
         </style>
         <script language="javascript">
@@ -42,7 +42,8 @@
                     },
                     north :{
                         closable:true,
-                        slidable:false
+                        slidable:false,
+                        size:50
                     },
                     west: {
                         minSize: wsize,
@@ -72,7 +73,7 @@
                     });
                 }
             }
- 
+
             /** hide menus **/
             function hideMenus() {
                 $(".manual").hide();
@@ -84,7 +85,7 @@
         <!-- top bar -->
 
         <div id="top-pane" class="ui-layout-north" style="overflow:hidden">
-            <iframe src="<?php echo $topUrl; ?>" name="top" width="100%" frameborder="0" height="20" marginheight="0" scrolling="no"></iframe>
+            <iframe src="<?php echo $topUrl; ?>" name="top" width="100%" frameborder="0" height="50" marginheight="0" scrolling="no"></iframe>
         </div>
         <div id="left-pane" class="ui-layout-west">
             <!-- left bar -->
