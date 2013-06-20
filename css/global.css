@@ -161,11 +161,18 @@ img {
 }
 
 /* Dropdown menus */
-#field_menu {
-  position: absolute !important;
+.menu, #field_menu, .doc_menu {
+  display: none;
+  float: right;
+  margin-right: 100px;
+  margin-top: 0px;
+  min-width: 150px;
+  padding-left: 3px;
+  padding-right: 3px;
+  position: absolute;
 }
 #field_menu a {
-  font-size: 11px !important;
+  font: 11px Verdana, Dejavu Sans, sans-serif !important;
   padding: 5px !important;
 }
 .menu,
@@ -233,23 +240,6 @@ img {
   font-style: italic;
 }
 
-/* Menu */
-/*.menu, #field_menu, .doc_menu {
-  background-color: #eee;
-  border-bottom: 2px #ccc solid;
-  border-left: 1px #ccc solid;
-  border-right: 2px #ccc solid;
-  border-top: 1px #ccc solid;
-  display: none;
-  float: right;
-  margin-right: 100px;
-  margin-top: 0px;
-  min-width: 100px;
-  padding-left: 3px;
-  padding-right: 3px;
-  position: absolute;
-}*/
-
 /* Tables */
 table th {
   background-color: #e5e5e5;
@@ -264,8 +254,38 @@ table th {
 }
 
 /* Records */
+.record {
+  border: 0 !important;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  padding: 4px;
+}
+.record:hover {
+  background-color: #d8eaf2;
+}
+.record table {
+  background: #fff !important;
+  border: 1px #ccc solid !important;
+}
+.record table:hover {
+  background: #fff !important;
+}
 .record_row,
 .record_row * {
   font: 12px Consolas, Bitstream Vera Sans Mono, monospace !important;
   font-style: italic;
+}
+.record tr > td[width="50"] {
+  color: #efefef;
+  font-family: Aller, Georgia, sans-serif;
+  font-style: italic;
+  font-size: 28px;
+  /* @TODO: Fix high indexes */
+  max-width: 105px;
+  overflow: hidden;
+}
+.record a {
+  color: #666;
+  font: 11px Verdana, Dejavu Sans, sans-serif !important;
 }
