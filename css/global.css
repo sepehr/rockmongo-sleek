@@ -234,7 +234,7 @@ img {
 
 /* Top version */
 .version {
-  color: #999 !important;
+  color: #555 !important;
   font: 11px Aller, Georgia, serif;
   font-style: italic;
 }

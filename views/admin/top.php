@@ -18,6 +18,7 @@ function showServerMenu(link) {
 			<a href="<?php h(url("server.replication")); ?>" target="right" title="<?php hm("master"); ?>">
 				<?php hm("master"); ?>
 			</a>
+
 			<?php else:?>
 			<a href="<?php h(url("server.replication")); ?>" target="right" title="<?php hm("slave"); ?>">
 				<?php hm("slave"); ?>
@@ -26,27 +27,39 @@ function showServerMenu(link) {
 		<?php endif;?>
 
 		<a href="#" onclick="showServerMenu(this);return false;">
-			<?php hm("tools");?> <span style="font-size:11px">▼</span>
+			<?php hm("tools");?> <span class="icon icon-chevron-down"></span>
+		</a>
+
+		<a href="#" onclick="showManuals(this);return false;">
+			<?php hm("manuals");?> <span class="icon icon-chevron-down"></span>
 		</a>
 
 		<select name="host" onchange="window.parent.location='<?php h(url("admin.changeHost")); ?>&index='+this.value" title="<?php hm("switch_hosts"); ?>">
-		<?php foreach ($servers as $index => $server):?>
-		<option value="<?php h($index);?>" <?php if($index == $serverIndex): ?>selected="selected"<?php endif;?>>
-			<?php h(isset($server["mongo_name"]) ? $server["mongo_name"] : "");?>
-		</option>
-		<?php endforeach; ?>
+			<?php foreach ($servers as $index => $server):?>
+			<option value="<?php h($index);?>" <?php if($index == $serverIndex): ?>selected="selected"<?php endif;?>>
+				<?php h(isset($server["mongo_name"]) ? $server["mongo_name"] : "");?>
+			</option>
+			<?php endforeach; ?>
 		</select>
 	</div>
 
 	<div class="right">
 		<?php // h($admin);?>
-		<a href="#" onclick="showManuals(this);return false;">
-			<?php hm("manuals");?> <span style="font-size:11px">▼</span>
-		</a>
+
 		<a href="<?php h($logoutUrl);?>" target="_top">
 			<?php hm("logout"); ?>
 		</a>
-		<?php render_select("language", rock_load_languages(), __LANG__, array( "style" => "width:100px", "onchange" => "window.top.location='index.php?action=admin.changeLang&lang='+this.value" )); ?>
-		<a href="<?php h(url("admin.about")); ?>" target="right" class="version">RockMongo <?php h(ROCK_MONGO_VERSION);?></a></div>
+
+		<?php
+			render_select("language", rock_load_languages(), __LANG__, array(
+				"style"    => "width:100px",
+				"onchange" => "window.top.location='index.php?action=admin.changeLang&lang='+this.value",
+			));
+		?>
+
+		<a href="<?php h(url("admin.about")); ?>" target="right" class="version">
+			<span class="icon icon-leaf"></span> RockMongo <?php h(ROCK_MONGO_VERSION);?>
+		</a>
+	</div>
 	<div class="clear"></div>
 </div>
