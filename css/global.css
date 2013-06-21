@@ -368,3 +368,8 @@ input[type="submit"]:hover {
   background-repeat: repeat-x;
   border-color: #ccc #ccc #b5b5b5;
 }
+
+/* Sidebar */
+.count-small {
+  font-size: 11px;
+}
