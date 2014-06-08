@@ -10,7 +10,7 @@ function highlightCollection(name, count) {
 		var a = $(this).find("a");
 		if (a.attr("cname") == name) {
 			if (count != undefined) {
-				$(this).find(".count").html('(' + count + ')');
+				$(this).find(".count").html('(' + count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ')');
 			}
 			a.css("font-weight", "bold");
 			a.css("color", "blue");
