@@ -54,7 +54,7 @@ $(function () {
 
 </script>
 
-<div class="sidebar-wrapper" style="background-color:#eeefff;height:100%">
+<div class="sidebar-wrapper" style="background-color:#fafafa;height:100%">
 	<div style="margin-left:20px">
 		<a href="<?php h(url("server.index"));?>" target="right">
 			<span class="icon icon-globe"></span>

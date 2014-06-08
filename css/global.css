@@ -101,7 +101,7 @@ img {
   padding: 0;
 }
 .dbs li {
-  background-color: #eeefff;
+  background-color: #fafafa;
   padding-left: 20px;
 }
 .dbs ul {
@@ -376,7 +376,7 @@ input[type="submit"]:hover {
 
 /* Breadcrumb */
 #breadcrumb-trail {
-  padding: 6px 0;
+  padding: 11px 0;
 }
 #breadcrumb-trail a {
   font-size: 13px;
