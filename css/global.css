@@ -54,7 +54,7 @@ blockquote {
 .operation {
   border-bottom: 1px #ccc solid;
   margin-bottom: 11px;
-  padding: 5px 0 10px 0;
+  padding: 10px 0;
 }
 .operation a {
   font-size: 13px;
@@ -383,6 +383,7 @@ input[type="submit"]:hover {
 h3,
 #breadcrumb-trail {
   padding: 11px 0;
+  margin-bottom: 0;
   border-bottom: 1px solid #ccc;
 }
 h3 a,
