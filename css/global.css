@@ -380,9 +380,12 @@ input[type="submit"]:hover {
 }
 
 /* Breadcrumb */
+h3,
 #breadcrumb-trail {
   padding: 11px 0;
+  border-bottom: 1px solid #ccc;
 }
+h3 a,
 #breadcrumb-trail a {
   font-size: 13px;
 }
