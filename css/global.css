@@ -52,12 +52,12 @@ blockquote {
   padding: 0px;
 }
 .operation {
-  border-bottom: 1px #efefef solid;
-  margin-bottom: 5px;
-  padding: 3px;
+  border-bottom: 1px #ccc solid;
+  margin-bottom: 11px;
+  padding: 5px 0 10px 0;
 }
 .operation a {
-  font-size: 12px;
+  font-size: 13px;
 }
 .operation a.current {
   font-weight: bold;
