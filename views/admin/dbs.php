@@ -94,7 +94,7 @@ $(function () {
 								<span class="icon icon-<?php if (preg_match("/\.(files|chunks)$/", $table)) h('th'); else h('list-alt'); ?>"></span>
 								<?php h($table);?>
 							</a>
-							<span class="count count-small">(<?php h(number_format($count));?>)</span>
+							<span class="count count-small">(<?php h(number_format($count)); ?>)</span>
 						</li>
 						<?php endforeach; ?>
 
