@@ -373,3 +373,11 @@ input[type="submit"]:hover {
 .count-small {
   font-size: 11px;
 }
+
+/* Breadcrumb */
+#breadcrumb-trail {
+  padding: 6px 0;
+}
+#breadcrumb-trail a {
+  font-size: 13px;
+}
