@@ -50,15 +50,8 @@ function r_show_more_options(btn) {
 			<td><?php hm("password"); ?></td>
 			<td><input type="password" name="password" style="width:150px"/></td>
 		</tr>
-		<tr class="separator">
-			<td colspan="2">Non-Admins</td>
-		</tr>
-		<tr>
-			<td valign="top">DB Name(s)</td>
-			<td><input type="text" name="db" style="width:150px" value="<?php h($db); ?>"/><br/></td>
-		</tr>
 		<tr class="more">
-			<td colspan="2"><a href="#" onclick="return r_show_more_options(this)" id="more_options_btn">More &raquo;</a></td>
+			<td colspan="2"><br><a href="#" onclick="return r_show_more_options(this)" id="more_options_btn">More &raquo;</a></td>
 		</tr>
 		<tbody style="display:none" id="more_options">
 		<tr>
@@ -79,12 +72,25 @@ function r_show_more_options(btn) {
 			</select>
 			</td>
 		</tr>
+		<tr class="separator">
+			<td colspan="2"><br><br>Non-Admins</td>
+		</tr>
+		<tr>
+			<td valign="top">DB Name(s)</td>
+			<td><input type="text" name="db" style="width:150px" value="<?php h($db); ?>"/><br/></td>
+		</tr>
 		</tbody>
 		<tr>
-			<td colspan="2" align="center"><input type="submit" value="<?php hm("loginandrock"); ?>"/></td>
+			<td colspan="2" align="center">
+			<br>
+			<input type="submit" value="<?php hm("loginandrock"); ?>"/>
+			<br><br>
+			</td>
 		</tr>
 	</table>
 	</form>
 
-	<?php hm("rockmongocredits") ?>
+	<div class="credit">
+		<?php hm("rockmongocredits") ?>
+	</div>
 </div>

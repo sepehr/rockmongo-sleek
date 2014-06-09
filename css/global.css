@@ -408,3 +408,11 @@ h3 a,
 #login-form tr.separator td {
   margin-bottom: 7px;
 }
+#login-form-wrapper .credit {
+  margin-top: 5px;
+  text-align: center;
+}
+#login-form-wrapper .credit,
+#login-form-wrapper .credit a {
+  font-size: 11px;
+}
