@@ -2,9 +2,7 @@
 * {
   font: 13px Helvetica, Arial, Freesans, Clean, sans-serif;
 }
-html, body {
-  height: 100%;
-}
+html, body {}
 body {
   margin: 0;
   padding: 0;
