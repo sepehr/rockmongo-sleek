@@ -397,3 +397,14 @@ h3 a,
   border: 1px #fff solid !important;
   box-shadow: 0px 1px 4px #888;
 }
+#login-form table {
+  width: 100%;
+}
+#login-form tr.separator td {
+  padding-bottom: 7px;
+  font-weight: bold !important;
+  border-bottom: 1px solid #eee;
+}
+#login-form tr.separator td {
+  margin-bottom: 7px;
+}

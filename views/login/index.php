@@ -35,8 +35,8 @@ function r_show_more_options(btn) {
 	<form id="login-form" method="post">
 	<input type="hidden" name="more" id="show_more_options" value="<?php echo $moreOptions; ?>"/>
 	<table>
-		<tr>
-			<td colspan="2" style="background:#eee"><strong>Log-in:</strong></td>
+		<tr class="separator">
+			<td colspan="2"><strong>Login</strong></td>
 		</tr>
 		<tr>
 			<td width="100">Host</td>
@@ -50,8 +50,8 @@ function r_show_more_options(btn) {
 			<td><?php hm("password"); ?>:</td>
 			<td><input type="password" name="password" style="width:150px"/></td>
 		</tr>
-		<tr>
-			<td colspan="2" style="background:#eee"><strong>Non-Admin users:</strong></td>
+		<tr class="separator">
+			<td colspan="2"><strong>Non-Admins</strong></td>
 		</tr>
 		<tr>
 			<td valign="top">DB Name(s):</td>
