@@ -21,7 +21,7 @@ function r_show_more_options(btn) {
 		$("#show_more_options").val(1);
 	}
 	else {
-		$("#more_options").hide();	
+		$("#more_options").hide();
 		$(btn).html("More &raquo;");
 		showMore = 0;
 		$("#show_more_options").val(0);
@@ -30,9 +30,9 @@ function r_show_more_options(btn) {
 }
 </script>
 
-<div style="padding:10px;margin:200px auto;width:300px;border:1px #ccc solid">
+<div id="login-form-wrapper" style="padding:10px;margin:200px auto;width:300px;border:1px #ccc solid">
 <?php if (isset($message)):?><p class="error"><?php h($message); ?></p><?php endif;?>
-	<form method="post">
+	<form id="login-form" method="post">
 	<input type="hidden" name="more" id="show_more_options" value="<?php echo $moreOptions; ?>"/>
 	<table>
 		<tr>
@@ -85,6 +85,6 @@ function r_show_more_options(btn) {
 		</tr>
 	</table>
 	</form>
-	
+
 	<?php hm("rockmongocredits") ?>
 </div>
