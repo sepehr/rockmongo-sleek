@@ -390,3 +390,10 @@ h3 a,
 #breadcrumb-trail a {
   font-size: 13px;
 }
+
+/* Login Form */
+#login-form-wrapper {
+  border-radius: 5px;
+  border: 1px #fff solid !important;
+  box-shadow: 0px 1px 4px #888;
+}
