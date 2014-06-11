@@ -2,7 +2,7 @@
 	<?php render_server_menu("status"); ?>
 </div>
 
-<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600">
+<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600" class="table-main">
 	<tr>
 		<th colspan="2"><?php hm("server_status"); ?> ({serverStatus:1})</th>
 	</tr>

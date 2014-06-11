@@ -2,7 +2,7 @@
 	<?php render_server_menu("replication"); ?>
 </div>
 
-<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600">
+<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600" class="table-main">
 	<tr>
 		<th colspan="2"><?php hm("repstatus"); ?> (db.getReplicationInfo())</th>
 	</tr>
@@ -17,7 +17,7 @@
 <?php if(!empty($me)): ?>
 <div class="gap"></div>
 
-<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600">
+<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600" class="table-main">
 	<tr>
 		<th colspan="2"><?php hm("me"); ?> (<a href="<?php h(url("collection.index", array( "db" => "local", "collection" => "me" ))); ?>">local.me</a>)</th>
 	</tr>
@@ -33,7 +33,7 @@
 <?php if(!empty($slaves)): ?>
 <div class="gap"></div>
 
-<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600">
+<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600" class="table-main">
 	<tr>
 		<th colspan="2"><?php hm("slaves"); ?> (<a href="<?php h(url("collection.index", array( "db" => "local", "collection" => "slaves" ))); ?>">local.slaves</a>)</th>
 	</tr>
@@ -54,7 +54,7 @@
 <?php if(!empty($masters)): ?>
 <div class="gap"></div>
 
-<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600">
+<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600" class="table-main">
 	<tr>
 		<th colspan="2"><?php hm("masters"); ?> (<a href="<?php h(url("collection.index", array( "db" => "local", "collection" => "sources" ))); ?>">local.sources</a>)</th>
 	</tr>

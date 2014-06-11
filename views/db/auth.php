@@ -5,7 +5,7 @@
 	<a href="<?php h(url("db.addUser", array("db"=>$db))); ?>">Add User</a>
 </div>
 
-<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600">
+<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600" class="table-main">
 	<tr>
 		<th>ID</th>
 		<th>User</th>

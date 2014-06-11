@@ -1,15 +1,15 @@
 <h3><?php render_navigation($db,$collection,false); ?> &raquo; <?php hm("statistics"); ?> [<a href="<?php h($_SERVER["REQUEST_URI"]);?>"><?php hm("refresh"); ?></a>]</h3>
 
-<table bgcolor="#cccccc" width="600" cellpadding="2" cellspacing="1">
+<table bgcolor="#cccccc" width="600" class="table-main" cellpadding="2" cellspacing="1">
 	<tr bgcolor="#cfffff">
 		<td colspan="2">db.<?php h($collection); ?>.stats()</td>
 	</tr>
 <?php foreach ($stats as $name => $stat):?>
 	<tr bgcolor="#ffffff">
 		<td width="150" bgcolor="#fffeee" valign="top"><?php h($name);?></td>
-		<td><?php 
+		<td><?php
 			if (is_array($stat)) {
-				h("<xmp>" . var_export($stat, true) . "</xmp>"); 
+				h("<xmp>" . var_export($stat, true) . "</xmp>");
 			}
 			else {
 				if (in_array($name, array( "size", "storageSize", "lastExtentSize", "totalIndexSize" ))) {
@@ -27,7 +27,7 @@
 	<?php foreach ($top as $name => $stat):?>
 		<tr bgcolor="#ffffff">
 			<td width="150" bgcolor="#fffeee" valign="top"><?php h($name);?></td>
-			<td><?php 
+			<td><?php
 				h($stat);
 				?></td>
 		</tr>

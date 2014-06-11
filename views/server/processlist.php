@@ -2,15 +2,15 @@
 	<?php render_server_menu("processlist"); ?>
 </div>
 
-<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600">
+<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600" class="table-main">
 	<tr>
 		<th colspan="10"><?php hm("processlist"); ?> (db.$cmd.sys.inprog.find({$all:1}))</th>
 	</tr>
 	<tr bgcolor="#cfffff">
 		<?php foreach (array(
-			"id" =>"ID", 
-			"desc" => "Description", 
-			"client" => "Client", 
+			"id" =>"ID",
+			"desc" => "Description",
+			"client" => "Client",
 			"active" => "Active",
 			"lockType" => "LockType",
 			"waitingForLock" => "Waiting",
@@ -24,9 +24,9 @@
 	<?php foreach ($progs as $prog):?>
 	<tr bgcolor="#fffeee">
 		<?php foreach (array(
-			"opid" =>"ID", 
-			"desc" => "Description", 
-			"client" => "Client", 
+			"opid" =>"ID",
+			"desc" => "Description",
+			"client" => "Client",
 			"active" => "Active",
 			"lockType" => "LockType",
 			"waitingForLock" => "Waiting",
@@ -44,7 +44,7 @@
 				endif;
 				?>
 			<?php endif; ?>
-		</td>	
+		</td>
 		<?php endforeach;?>
 	</tr>
 	<?php if(isset($prog["query"])):?>

@@ -31,19 +31,19 @@ $(function() {
 });
 </script>
 
-<h3><?php render_navigation($db,$collection); ?> &raquo; <a href="<?php 
-				h(url("collection.collectionIndexes", array( 
-					"db" => $db, 
+<h3><?php render_navigation($db,$collection); ?> &raquo; <a href="<?php
+				h(url("collection.collectionIndexes", array(
+					"db" => $db,
 					"collection" => $collection
 				)));
 			?>"><?php hm("indexes");?></a> &raquo; <?php hm("create"); ?></h3>
-			
+
 <?php if(isset($message)): ?>
 <p class="error"><?php h($message);?></p>
 <?php endif; ?>
-			
+
 <form method="post">
-<table width="600">
+<table width="600" class="table-main">
 	<tr>
 		<td width="130"><?php hm("name"); ?></td>
 		<td><input type="text" name="name"/></td>

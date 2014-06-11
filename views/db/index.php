@@ -23,7 +23,7 @@ function setManualPosition(className, x, y) {
 		});
 	}
 }
- 
+
 /** hide menus **/
 function hideMenus() {
 	$(".menu").hide();
@@ -40,7 +40,7 @@ $(function () {
 	<?php render_db_menu($db) ?>
 </div>
 
-<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600">
+<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600" class="table-main">
 	<?php foreach ($stats as $param=>$value):?>
 	<tr bgcolor="#fffeee">
 		<td width="120" valign="top"><?php h($param);?></td>

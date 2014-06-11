@@ -4,7 +4,7 @@
 
  <a href="<?php h(url("server.createDatabase")); ?>"><?php hm("create_database"); ?></a>
 
-<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600">
+<table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600" class="table-main">
 	<tr>
 		<th><?php hm("name"); ?></th>
 		<th><?php hm("size"); ?></th>
