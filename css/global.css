@@ -101,7 +101,7 @@ img {
   padding: 0;
 }
 .dbs li {
-  background-color: #fafafa;
+  background-color: #fff;
   padding-left: 20px;
 }
 .dbs ul {
@@ -415,4 +415,15 @@ h3 a,
 #login-form-wrapper .credit,
 #login-form-wrapper .credit a {
   font-size: 11px;
+}
+
+/* Main Table */
+.table-main {
+
+}
+
+/* Misc */
+.code {
+  font: 11px Monaco, Consolas, Bitstream Vera Sans Mono, monospace;
+  line-height: 18px;
 }
