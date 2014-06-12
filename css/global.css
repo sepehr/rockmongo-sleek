@@ -424,3 +424,6 @@ h3 a,
   font: 11px Monaco, Consolas, Bitstream Vera Sans Mono, monospace;
   line-height: 18px;
 }
+.op-kill {
+  font-size: 10px;
+}
