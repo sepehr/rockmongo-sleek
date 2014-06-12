@@ -4,12 +4,12 @@
 
 <table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600" class="table-main">
 	<tr>
-		<th colspan="2"><?php hm("server_status"); ?> ({serverStatus:1})</th>
+		<th colspan="2"><?php hm("server_status"); ?> <span class="code">({serverStatus:1})</span></th>
 	</tr>
 	<?php foreach ($status as $param=>$value):?>
-	<tr bgcolor="#fffeee">
+	<tr bgcolor="#fff">
 		<td width="120" valign="top"><?php h($param);?></td>
-		<td><?php h($value);?></td>
+		<td class="code"><?php h($value);?></td>
 	</tr>
 	<?php endforeach; ?>
 </table>
