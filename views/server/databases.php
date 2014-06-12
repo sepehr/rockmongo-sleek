@@ -2,7 +2,7 @@
 	<?php render_server_menu("databases"); ?>
 </div>
 
-<a href="<?php h(url("server.createDatabase")); ?>"><?php hm("create_database"); ?></a>
+<a class="btn" href="<?php h(url("server.createDatabase")); ?>"><?php hm("create_database"); ?></a>
 <br>
 <br>
 
