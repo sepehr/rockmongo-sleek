@@ -419,7 +419,8 @@ h3 a,
 
 /* Misc */
 .table-main {}
-.code {
+.code,
+.code * {
   font: 11px Monaco, Consolas, Bitstream Vera Sans Mono, monospace;
   line-height: 18px;
 }
