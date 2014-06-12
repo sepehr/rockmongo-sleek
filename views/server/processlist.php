@@ -8,15 +8,15 @@
 	</tr>
 	<tr bgcolor="#cfffff">
 		<?php foreach (array(
-			"id" =>"ID",
-			"desc" => "Description",
-			"client" => "Client",
-			"active" => "Active",
-			"lockType" => "LockType",
+			"id"             =>"ID",
+			"desc"           => "Description",
+			"client"         => "Client",
+			"active"         => "Active",
+			"lockType"       => "LockType",
 			"waitingForLock" => "Waiting",
-			"secs_running" => "SecsRunning",
-			"op" => "Operation",
-			"ns" => "NameSpace"
+			"secs_running"   => "SecsRunning",
+			"op"             => "Operation",
+			"ns"             => "NameSpace"
 			) as $param => $desc):?>
 		<td><?php h($desc); ?></td>
 		<?php endforeach; ?>
@@ -24,15 +24,15 @@
 	<?php foreach ($progs as $prog):?>
 	<tr bgcolor="#fffeee">
 		<?php foreach (array(
-			"opid" =>"ID",
-			"desc" => "Description",
-			"client" => "Client",
-			"active" => "Active",
-			"lockType" => "LockType",
+			"opid"           =>"ID",
+			"desc"           => "Description",
+			"client"         => "Client",
+			"active"         => "Active",
+			"lockType"       => "LockType",
 			"waitingForLock" => "Waiting",
-			"secs_running" => "SecsRunning",
-			"op" => "Operation",
-			"ns" => "NameSpace",
+			"secs_running"   => "SecsRunning",
+			"op"             => "Operation",
+			"ns"             => "NameSpace",
 			) as $param => $desc):?>
 		<td valign="top" <?php if(isset($prog["query"])&&$param=="opid"): ?>rowspan="2"<?php endif; ?>>
 			<?php if(isset($prog[$param])):?>
