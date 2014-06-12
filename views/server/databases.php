@@ -2,7 +2,9 @@
 	<?php render_server_menu("databases"); ?>
 </div>
 
- <a href="<?php h(url("server.createDatabase")); ?>"><?php hm("create_database"); ?></a>
+<a href="<?php h(url("server.createDatabase")); ?>"><?php hm("create_database"); ?></a>
+<br>
+<br>
 
 <table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600" class="table-main">
 	<tr>
@@ -15,7 +17,7 @@
 		<th><?php hm("objects"); ?></th>
 	</tr>
 	<?php foreach ($dbs as $db):?>
-	<tr bgcolor="#fffeee">
+	<tr bgcolor="#fff">
 		<td width="120" valign="top"><a href="<?php h(url("db.index", array("db"=>$db["name"]))); ?>"><?php h($db["name"]);?></a></td>
 		<td width="80"><?php h($db["diskSize"]);?></td>
 		<td width="80"><?php h($db["storageSize"]);?></td>
