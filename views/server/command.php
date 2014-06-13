@@ -2,7 +2,9 @@
 	<?php render_server_menu("command"); ?>
 </div>
 
-<a href="http://docs.mongodb.org/manual/reference/command/" target="_blank">&raquo; <?php hm("listdbcommands"); ?></a> 
+<a href="http://docs.mongodb.org/manual/reference/command/" target="_blank">&raquo; <?php hm("listdbcommands"); ?></a>
+<br/>
+<br/>
 
 <?php if(isset($message)):?>
 <p class="error"><?php h($message);?></p>
@@ -11,19 +13,21 @@
 <form method="post">
 <textarea name="command" rows="5" cols="60"><?php h(x("command"));?></textarea>
 <br/>
+<br/>
 <?php hm("db"); ?>:
-<select name="db">
+<select name="db" style="margin-right:10px">
 <?php foreach ($dbs as $value):?>
 <option value="<?php h($value["name"]);?>" <?php if(xn("db")==$value["name"]):?>selected="selected"<?php endif;?>><?php h($value["name"]);?></option>
 <?php endforeach;?>
-</select> 
-<?php hm("format"); ?>:<select name="format">
+</select>
+<?php hm("format"); ?>: <select name="format">
 <?php foreach (array("json" => "JSON", "array" => "Array") as $param=>$value):?>
 <option value="<?php h($param);?>" <?php if(x("format")==$param):?>selected="selected"<?php endif;?>><?php h($value);?></option>
 <?php endforeach;?>
-</select> 
+</select>
 <br/>
-<input type="submit" value="<?php hm("execute"); ?>"/> 
+<br/>
+<input type="submit" value="<?php hm("execute"); ?>"/>
 </form>
 
 <?php if(isset($ret)):?>
