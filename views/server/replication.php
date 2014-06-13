@@ -4,12 +4,12 @@
 
 <table bgcolor="#cccccc" cellpadding="2" cellspacing="1" width="600" class="table-main">
 	<tr>
-		<th colspan="2"><?php hm("repstatus"); ?> (db.getReplicationInfo())</th>
+		<th colspan="2"><?php hm("repstatus"); ?> <span class="code">(db.getReplicationInfo())</span></th>
 	</tr>
 	<?php foreach ($status as $param=>$value):?>
-	<tr bgcolor="#fffeee">
+	<tr bgcolor="#fff">
 		<td width="120" valign="top"><?php h($param);?></td>
-		<td><?php h($value);?></td>
+		<td class="code"><?php h($value);?></td>
 	</tr>
 	<?php endforeach; ?>
 </table>
@@ -24,7 +24,7 @@
 	<?php foreach ($me as $param => $value):?>
 	<tr bgcolor="#fffeee">
 		<td width="120" valign="top"><?php h($param);?></td>
-		<td><?php h($value);?></td>
+		<td class="code"><?php h($value);?></td>
 	</tr>
 	<?php endforeach; ?>
 </table>
@@ -38,13 +38,13 @@
 		<th colspan="2"><?php hm("slaves"); ?> (<a href="<?php h(url("collection.index", array( "db" => "local", "collection" => "slaves" ))); ?>">local.slaves</a>)</th>
 	</tr>
 	<?php foreach ($slaves as $slave):?>
-	<tr bgcolor="#cfffff">
+	<tr bgcolor="#efefef">
 		<td colspan="2"><?php h($slave["_id"]); ?></td>
 	</tr>
 		<?php foreach ($slave as $param => $value):?>
 		<tr bgcolor="#fffeee">
 			<td width="120" valign="top"><?php h($param);?></td>
-			<td><?php h($value);?></td>
+			<td class="code"><?php h($value);?></td>
 		</tr>
 		<?php endforeach; ?>
 	<?php endforeach; ?>
@@ -65,7 +65,7 @@
 		<?php foreach ($master as $param => $value):?>
 		<tr bgcolor="#fffeee">
 			<td width="120" valign="top"><?php h($param);?></td>
-			<td><?php h($value);?></td>
+			<td class="code"><?php h($value);?></td>
 		</tr>
 		<?php endforeach; ?>
 	<?php endforeach; ?>
