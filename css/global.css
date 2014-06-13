@@ -45,11 +45,14 @@ blockquote {
   text-shadow: 1px 1px #fff;
 }
 .message {
-  background-color: #eee;
-  border: 1px #ccc solid;
-  color: green;
+  background-color: #f7f7f7;
+  border: 1px #ddd solid;
+  border-radius: 5px;
+  color: #00aa00;
+  font-weight: bold;
   margin: 10px 0;
-  padding: 0px;
+  padding: 10px;
+  width: 97%;
 }
 .operation {
   border-bottom: 1px #ccc solid;
