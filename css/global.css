@@ -149,10 +149,6 @@ img {
   background-repeat: repeat-x;
 }
 .top select {
-  background-color: #fff;
-  border: 1px solid #999;
-  color: #666;
-  font-size: 12px;
   height: auto;
   padding: 1px;
 }
