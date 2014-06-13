@@ -2,12 +2,12 @@
 function addArgument() {
 	var no = $("#arguments").children("div").length;
 	$("#arguments").show();
-	$("#arguments").append("<div><?php hm("argument"); ?> #<span>" + no +  "</span>[JSON] <a href=\"#\" onclick=\"removeArgument(this);return false;\"><?php hm("remove"); ?></a><br/><textarea name=\"argument[]\" rows=\"5\" cols=\"60\"></textarea><br/></div>");
+	$("#arguments").append("<div><?php hm("argument"); ?> #<span>" + no +  "</span>[JSON] <a href=\"#\" onclick=\"removeArgument(this);return false;\"><?php hm("remove"); ?></a><br/><textarea name=\"argument[]\" rows=\"5\" cols=\"60\"></textarea><br/><br/></div>");
 }
 
 function removeArgument(link) {
 	$(link).parent().remove();
-	
+
 	//re-order
 	var divs = $("#arguments").children("div");
 	for (var i=0; i<divs.length; i++) {
@@ -21,7 +21,8 @@ function removeArgument(link) {
 </div>
 
 <a href="http://api.mongodb.org/js/" target="_blank">&raquo; Javascript API</a>
-
+<br/>
+<br/>
 
 <?php if(isset($message)):?>
 <p class="error"><?php h($message);?></p>
@@ -29,6 +30,7 @@ function removeArgument(link) {
 
 <form method="post">
 <textarea name="code" rows="20" cols="80"><?php h(x("code"));?></textarea>
+<br/>
 <br/>
 <div id="arguments" <?php if(empty($arguments)):?>style="display:none"<?php endif;?>>
 <?php if(!empty($arguments)):?>
@@ -40,13 +42,17 @@ function removeArgument(link) {
 <?php endif;?>
 </div>
 <?php hm("db"); ?>:
-<select name="db">
+<select name="db" style="margin-right:10px">
 <?php foreach ($dbs as $value):?>
 <option value="<?php h($value["name"]);?>" <?php if(xn("db")==$value["name"]):?>selected="selected"<?php endif;?>><?php h($value["name"]);?></option>
 <?php endforeach;?>
-</select> <?php hm("argument"); ?>:<input type="button" onclick="addArgument()" value="<?php hm("add"); ?>"/>
+</select>
+<?php hm("argument"); ?>: <input type="button" onclick="addArgument()" value="<?php hm("add"); ?>"/>
 <br/>
-<input type="submit" value="Execute Code"/> 
+<br/>
+<input type="submit" value="Execute Code"/>
+<br/>
+<br/>
 </form>
 
 <?php if(isset($ret)):?>
