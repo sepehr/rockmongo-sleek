@@ -255,6 +255,8 @@ table th {
   background-image: linear-gradient(top, rgb(235, 235, 235), rgb(229, 229, 229));
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ebebeb', EndColorStr='#e5e5e5');
   border-top: 1px solid #fafafa;
+  padding: 5px;
+  text-shadow: 1px 1px #fff;
 }
 
 /* Records */
