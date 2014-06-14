@@ -49,9 +49,6 @@ $(function () {
 	    }
 	});
 });
-
-
-
 </script>
 
 <div class="sidebar-wrapper" style="background-color:#fff;height:100%">
