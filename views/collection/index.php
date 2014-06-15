@@ -86,7 +86,7 @@
 		<!-- float divs (for fields and hints) -->
 		<div id="query_fields_list" class="fieldsmenu">
 			<div align="right" style="padding-right:10px;background:#999"><a href="#" onclick="closeQueryFields();return false;" title="Click to close"><img src="<?php render_theme_path() ?>/images/accept.png" width="14"/></a></div>
-			<ul>
+			<ul class="code">
 			<?php foreach ($nativeFields as $field): if($field == "_id") {continue;}  ?>
 				<li><label>
 					<input type="checkbox" name="query_fields[]" value="<?php h($field); ?>"
@@ -98,7 +98,7 @@
 		</div>
 		<div id="query_hints_list" class="fieldsmenu">
 			<div align="right" style="padding-right:10px;background:#999"><a href="#" onclick="closeQueryHints();return false;" title="Click to close"><img src="<?php render_theme_path() ?>/images/accept.png" width="14"/></a></div>
-			<ul>
+			<ul class="code">
 			<?php foreach ($indexFields as $index => $field):?>
 				<li title="<?php h(htmlspecialchars($field["keystring"])); ?>"><label><input type="checkbox" name="query_hints[<?php h($index); ?>]" value="<?php h($field["name"]); ?>" <?php if(in_array($field["name"],$queryHints)): ?>checked="checked"<?php endif;?> class="query_hints" /> <?php h($field["name"]); ?></label></li>
 			<?php endforeach; ?>
