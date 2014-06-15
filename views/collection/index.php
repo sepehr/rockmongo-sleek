@@ -1,15 +1,15 @@
 <!-- Global configuration -->
 <script language="javascript">
-var explainURL = "<?php h(url("collection.explainQuery"));?>";
-var currentURL = "<?php h($_SERVER["REQUEST_URI"]); ?>";
-var currentDb = "<?php h($db);?>";
-var currentCollection = "<?php h($collection); ?>";
-var currentFormat = "<?php h(x("format")); ?>";
-var currentRecordsCount = <?php echo $recordsCount;?>;
-var currentFields = new Array();
-<?php foreach ($nativeFields as $field): if($field == "_id") {continue;}  ?>
-currentFields.push("<?php h(addslashes($field));?>");
-<?php endforeach;?>
+	var explainURL = "<?php h(url("collection.explainQuery"));?>";
+	var currentURL = "<?php h($_SERVER["REQUEST_URI"]); ?>";
+	var currentDb = "<?php h($db);?>";
+	var currentCollection = "<?php h($collection); ?>";
+	var currentFormat = "<?php h(x("format")); ?>";
+	var currentRecordsCount = <?php echo $recordsCount;?>;
+	var currentFields = new Array();
+	<?php foreach ($nativeFields as $field): if($field == "_id") {continue;}  ?>
+	currentFields.push("<?php h(addslashes($field));?>");
+	<?php endforeach;?>
 </script>
 
 <!-- Import resources -->
