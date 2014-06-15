@@ -74,6 +74,7 @@
 						<option value="remove" <?php if(x("command")=="remove"):?>selected="selected"<?php endif;?>>remove</option>
 						<option value="modify" <?php if(x("command")=="modify"):?>selected="selected"<?php endif;?>>modify</option>
 					</select>
+					<br/><br/>
 				</td>
 			</tr>
 			<tr>
