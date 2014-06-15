@@ -9,14 +9,14 @@
   padding-left:0;
   position:absolute;
   display:none;
-  width:400px;
+  width:500px;
 }
 .fieldsmenu div {
   background: #ccc !important;
   padding: 5px !important;
 }
 .fieldsmenu ul {list-style-type:none; margin:0; padding:0; font-size:12px}
-.fieldsmenu ul li {float:left; width:200px}
+.fieldsmenu ul li {float:left; width:250px}
 .fieldsmenu ul li label input {position:relative; top:4px; left:4px;}
 
 /** operation menu **/
