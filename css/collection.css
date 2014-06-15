@@ -11,12 +11,13 @@
   display:none;
   width:400px;
 }
-.fieldsmenu > div {
+.fieldsmenu div {
   background: #ccc !important;
-  padding: 5px;
+  padding: 5px !important;
 }
-.fieldsmenu ul {list-style-type:none; margin:0; padding:0}
+.fieldsmenu ul {list-style-type:none; margin:0; padding:0; font-size:12px}
 .fieldsmenu ul li {float:left; width:200px}
+.fieldsmenu ul li label input {position:relative; top:4px; left:4px;}
 
 /** operation menu **/
 #field_menu a {display:block; }
