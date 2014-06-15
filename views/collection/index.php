@@ -28,83 +28,82 @@ currentFields.push("<?php h(addslashes($field));?>");
 
 <div class="query">
 <form method="get" id="query_form">
-<input type="hidden" name="db" value="<?php h_escape($db);?>"/>
-<input type="hidden" name="collection" value="<?php h_escape($collection);?>"/>
-<input type="hidden" name="action" value="<?php h_escape(x("action"));?>"/>
-<input type="hidden" name="format" value="<?php h_escape(x("format")); ?>"/>
-<table>
-	<tr>
-		<td valign="top">
-			<textarea name="criteria" rows="5" cols="70" style="height:100px"><?php h(x("criteria"));?></textarea><br/>
-			<div id="newobjInput" <?php if (x("command") !="modify"):?>style="display:none"<?php endif;?>>
-				New Object(see <a href="http://www.mongodb.org/display/DOCS/Updating" target="_blank">Updating</a> operators):<br/>
-				<textarea name="newobj" rows="5" cols="70"><?php h(x("newobj"));?></textarea>
-			</div>
-		</td>
-		<td valign="top" class="field_orders">
-			<!-- fields will be used in sorting -->
-			<p><input type="text" name="field[]" value="<?php h(rock_array_get(x("field"),0));?>" /> <select name="order[]"><option value="asc" <?php if (rock_array_get(x("order"),0)=="asc"):?>selected="selected"<?php endif;?>>ASC</option><option value="desc" <?php if (rock_array_get(x("order"),0)=="desc"):?>selected="selected"<?php endif;?>>DESC</option></select></p>
-			<p><input type="text" name="field[]" value="<?php h_escape(rock_array_get(x("field"),1));?>" /> <select name="order[]"><option value="asc" <?php if (rock_array_get(x("order"),1)=="asc"):?>selected="selected"<?php endif;?>>ASC</option><option value="desc" <?php if (rock_array_get(x("order"),1)=="desc"):?>selected="selected"<?php endif;?>>DESC</option></select></p>
-			<p><input type="text" name="field[]" value="<?php h_escape(rock_array_get(x("field"),2));?>" /> <select name="order[]"><option value="asc" <?php if (rock_array_get(x("order"),2)=="asc"):?>selected="selected"<?php endif;?>>ASC</option><option value="desc" <?php if (rock_array_get(x("order"),2)=="desc"):?>selected="selected"<?php endif;?>>DESC</option></select></p>
-			<p><input type="text" name="field[]" value="<?php h_escape(rock_array_get(x("field"),3));?>" /> <select name="order[]"><option value="asc" <?php if (rock_array_get(x("order"),3)=="asc"):?>selected="selected"<?php endif;?>>ASC</option><option value="desc" <?php if (rock_array_get(x("order"),3)=="desc"):?>selected="selected"<?php endif;?>>DESC</option></select> </p>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<!-- query fields and hints -->
-			<span id="fieldsAndHints" <?php if (x("command") !="findAll"):?>style="display:none"<?php endif;?>>
-			<?php if(!empty($nativeFields)):?>
-				<a href="#" onclick="showQueryFields(this);return false;" title="Choose fields to display">Fields(<span id="query_fields_count"><?php h(count($queryFields));?></span>) <span style="font-size:11px">▼</span></a> |
-				<a href="#" onclick="showQueryHints(this);return false;" title="Choose indexes will be used in query">Hints(<span id="query_hints_count"><?php h(count($queryHints));?></span>)  <span style="font-size:11px">▼</span></a> |
-			<?php endif; ?>
-			</span>
-			<!-- end query fields and hints -->
+	<input type="hidden" name="db" value="<?php h_escape($db);?>"/>
+	<input type="hidden" name="collection" value="<?php h_escape($collection);?>"/>
+	<input type="hidden" name="action" value="<?php h_escape(x("action"));?>"/>
+	<input type="hidden" name="format" value="<?php h_escape(x("format")); ?>"/>
+	<table>
+		<tr>
+			<td valign="top">
+				<textarea name="criteria" rows="5" cols="70" style="height:100px"><?php h(x("criteria"));?></textarea><br/>
+				<div id="newobjInput" <?php if (x("command") !="modify"):?>style="display:none"<?php endif;?>>
+					New Object(see <a href="http://www.mongodb.org/display/DOCS/Updating" target="_blank">Updating</a> operators):<br/>
+					<textarea name="newobj" rows="5" cols="70"><?php h(x("newobj"));?></textarea>
+				</div>
+			</td>
+			<td valign="top" class="field_orders">
+				<!-- fields will be used in sorting -->
+				<p><input type="text" name="field[]" value="<?php h(rock_array_get(x("field"),0));?>" /> <select name="order[]"><option value="asc" <?php if (rock_array_get(x("order"),0)=="asc"):?>selected="selected"<?php endif;?>>ASC</option><option value="desc" <?php if (rock_array_get(x("order"),0)=="desc"):?>selected="selected"<?php endif;?>>DESC</option></select></p>
+				<p><input type="text" name="field[]" value="<?php h_escape(rock_array_get(x("field"),1));?>" /> <select name="order[]"><option value="asc" <?php if (rock_array_get(x("order"),1)=="asc"):?>selected="selected"<?php endif;?>>ASC</option><option value="desc" <?php if (rock_array_get(x("order"),1)=="desc"):?>selected="selected"<?php endif;?>>DESC</option></select></p>
+				<p><input type="text" name="field[]" value="<?php h_escape(rock_array_get(x("field"),2));?>" /> <select name="order[]"><option value="asc" <?php if (rock_array_get(x("order"),2)=="asc"):?>selected="selected"<?php endif;?>>ASC</option><option value="desc" <?php if (rock_array_get(x("order"),2)=="desc"):?>selected="selected"<?php endif;?>>DESC</option></select></p>
+				<p><input type="text" name="field[]" value="<?php h_escape(rock_array_get(x("field"),3));?>" /> <select name="order[]"><option value="asc" <?php if (rock_array_get(x("order"),3)=="asc"):?>selected="selected"<?php endif;?>>ASC</option><option value="desc" <?php if (rock_array_get(x("order"),3)=="desc"):?>selected="selected"<?php endif;?>>DESC</option></select> </p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<!-- query fields and hints -->
+				<span id="fieldsAndHints" <?php if (x("command") !="findAll"):?>style="display:none"<?php endif;?>>
+				<?php if(!empty($nativeFields)):?>
+					<a href="#" onclick="showQueryFields(this);return false;" title="Choose fields to display">Fields(<span id="query_fields_count"><?php h(count($queryFields));?></span>) <span style="font-size:11px">▼</span></a> |
+					<a href="#" onclick="showQueryHints(this);return false;" title="Choose indexes will be used in query">Hints(<span id="query_hints_count"><?php h(count($queryHints));?></span>)  <span style="font-size:11px">▼</span></a> |
+				<?php endif; ?>
+				</span>
+				<!-- end query fields and hints -->
 
-			<label id="limitLabel" <?php if (x("command") !="findAll"):?>style="display:none"<?php endif;?>><?php hm("limit"); ?>:<input type="text" name="limit" size="5" value="<?php h(xi("limit"));?>"/> |</label>
-			<span id="pageSetLabel" <?php if (x("command") !="findAll"):?>style="display:none"<?php endif;?>>
-			<select name="pagesize" title="<?php hm("rows_per_page"); ?>">
-			<?php foreach (array(10, 15, 20, 30, 50, 100, 200) as $pagesize):?>
-				<option value="<?php h($pagesize);?>" <?php if(x("pagesize")==$pagesize):?>selected="selected"<?php endif;?>>Rows:<?php h($pagesize);?></option>
-			<?php endforeach;?>
-			</select> |</span>
-			<?php hm("action"); ?>:
-			<select name="command" onchange="changeCommand(this)">
-				<option value="findAll" <?php if(x("command")=="findAll"):?>selected="selected"<?php endif;?>>findAll</option>
-				<option value="remove" <?php if(x("command")=="remove"):?>selected="selected"<?php endif;?>>remove</option>
-				<option value="modify" <?php if(x("command")=="modify"):?>selected="selected"<?php endif;?>>modify</option>
-			</select>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2"><input type="submit" value="<?php hm("submit_query"); ?>"/> <input type="button" value="<?php hm("explain"); ?>" onclick="explainQuery(this.form)" /> <input type="button" value="<?php hm("clear_conditions"); ?>" onclick="window.location='<?php h(url("collection.index", array( "db"=>$db, "collection" => $collection, "format" => xn("format") ))); ?>'"/>
-			<?php if(isset($cost)):?>Cost <?php h(round($cost, 6));?>s<?php endif;?>
-			<?php if(isset($message)):?><p class="error"><?php h($message);?></p><?php endif;?></td>
-	</tr>
-</table>
+				<label id="limitLabel" <?php if (x("command") !="findAll"):?>style="display:none"<?php endif;?>><?php hm("limit"); ?>:<input type="text" name="limit" size="5" value="<?php h(xi("limit"));?>"/> |</label>
+				<span id="pageSetLabel" <?php if (x("command") !="findAll"):?>style="display:none"<?php endif;?>>
+				<select name="pagesize" title="<?php hm("rows_per_page"); ?>">
+				<?php foreach (array(10, 15, 20, 30, 50, 100, 200) as $pagesize):?>
+					<option value="<?php h($pagesize);?>" <?php if(x("pagesize")==$pagesize):?>selected="selected"<?php endif;?>>Rows:<?php h($pagesize);?></option>
+				<?php endforeach;?>
+				</select> |</span>
+				<?php hm("action"); ?>:
+				<select name="command" onchange="changeCommand(this)">
+					<option value="findAll" <?php if(x("command")=="findAll"):?>selected="selected"<?php endif;?>>findAll</option>
+					<option value="remove" <?php if(x("command")=="remove"):?>selected="selected"<?php endif;?>>remove</option>
+					<option value="modify" <?php if(x("command")=="modify"):?>selected="selected"<?php endif;?>>modify</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" value="<?php hm("submit_query"); ?>"/> <input type="button" value="<?php hm("explain"); ?>" onclick="explainQuery(this.form)" /> <input type="button" value="<?php hm("clear_conditions"); ?>" onclick="window.location='<?php h(url("collection.index", array( "db"=>$db, "collection" => $collection, "format" => xn("format") ))); ?>'"/>
+				<?php if(isset($cost)):?>Cost <?php h(round($cost, 6));?>s<?php endif;?>
+				<?php if(isset($message)):?><p class="error"><?php h($message);?></p><?php endif;?></td>
+		</tr>
+	</table>
 
-<!-- float divs (for fields and hints) -->
-<div id="query_fields_list" class="fieldsmenu">
-	<div align="right" style="padding-right:10px;background:#999"><a href="#" onclick="closeQueryFields();return false;" title="Click to close"><img src="<?php render_theme_path() ?>/images/accept.png" width="14"/></a></div>
-	<ul>
-	<?php foreach ($nativeFields as $field): if($field == "_id") {continue;}  ?>
-		<li><label>
-			<input type="checkbox" name="query_fields[]" value="<?php h($field); ?>"
-				<?php if(in_array($field,$queryFields)||$field=="_id"): ?>checked="checked"<?php endif;?>
-				<?php if($field=="_id"): ?>disabled="disabled"<?php endif?>
-			/> <?php h($field); ?></label></li>
-	<?php endforeach; ?>
-	</ul>
-</div>
-<div id="query_hints_list" class="fieldsmenu">
-	<div align="right" style="padding-right:10px;background:#999"><a href="#" onclick="closeQueryHints();return false;" title="Click to close"><img src="<?php render_theme_path() ?>/images/accept.png" width="14"/></a></div>
-	<ul>
-	<?php foreach ($indexFields as $index => $field):?>
-		<li title="<?php h(htmlspecialchars($field["keystring"])); ?>"><label><input type="checkbox" name="query_hints[<?php h($index); ?>]" value="<?php h($field["name"]); ?>" <?php if(in_array($field["name"],$queryHints)): ?>checked="checked"<?php endif;?> class="query_hints" /> <?php h($field["name"]); ?></label></li>
-	<?php endforeach; ?>
-	</ul>
-</div>
-<!-- end float divs -->
-
+	<!-- float divs (for fields and hints) -->
+	<div id="query_fields_list" class="fieldsmenu">
+		<div align="right" style="padding-right:10px;background:#999"><a href="#" onclick="closeQueryFields();return false;" title="Click to close"><img src="<?php render_theme_path() ?>/images/accept.png" width="14"/></a></div>
+		<ul>
+		<?php foreach ($nativeFields as $field): if($field == "_id") {continue;}  ?>
+			<li><label>
+				<input type="checkbox" name="query_fields[]" value="<?php h($field); ?>"
+					<?php if(in_array($field,$queryFields)||$field=="_id"): ?>checked="checked"<?php endif;?>
+					<?php if($field=="_id"): ?>disabled="disabled"<?php endif?>
+				/> <?php h($field); ?></label></li>
+		<?php endforeach; ?>
+		</ul>
+	</div>
+	<div id="query_hints_list" class="fieldsmenu">
+		<div align="right" style="padding-right:10px;background:#999"><a href="#" onclick="closeQueryHints();return false;" title="Click to close"><img src="<?php render_theme_path() ?>/images/accept.png" width="14"/></a></div>
+		<ul>
+		<?php foreach ($indexFields as $index => $field):?>
+			<li title="<?php h(htmlspecialchars($field["keystring"])); ?>"><label><input type="checkbox" name="query_hints[<?php h($index); ?>]" value="<?php h($field["name"]); ?>" <?php if(in_array($field["name"],$queryHints)): ?>checked="checked"<?php endif;?> class="query_hints" /> <?php h($field["name"]); ?></label></li>
+		<?php endforeach; ?>
+		</ul>
+	</div>
+	<!-- end float divs -->
 </form>
 </div>
 
