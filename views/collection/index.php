@@ -58,11 +58,17 @@
 					<span id="fieldsAndHints" <?php if (x("command") !="findAll"):?>style="display:none"<?php endif;?>>
 					<?php if(!empty($nativeFields)):?>
 						<a href="#" onclick="showQueryFields(this);return false;" title="Choose fields to display" class="field-list-trigger">
-							Fields(<span id="query_fields_count"><?php h(count($queryFields));?></span>)
+							Fields
+							<span class="field-list-count code">
+								(<span id="query_fields_count"><?php h(count($queryFields));?></span>)
+							</span>
 							<span class="icon icon-chevron-down"></span>
 						</a> |
 						<a href="#" onclick="showQueryHints(this);return false;" title="Choose indexes will be used in query" class="field-list-trigger">
-							Hints(<span id="query_hints_count"><?php h(count($queryHints));?></span>)
+							Hints
+							<span class="field-list-count code">
+								(<span id="query_hints_count"><?php h(count($queryHints));?></span>)
+							</span>
 							<span class="icon icon-chevron-down"></span>
 						</a> |
 					<?php endif; ?>
