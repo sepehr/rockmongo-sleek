@@ -57,20 +57,25 @@
 					<!-- query fields and hints -->
 					<span id="fieldsAndHints" <?php if (x("command") !="findAll"):?>style="display:none"<?php endif;?>>
 					<?php if(!empty($nativeFields)):?>
-						<a href="#" onclick="showQueryFields(this);return false;" title="Choose fields to display">Fields(<span id="query_fields_count"><?php h(count($queryFields));?></span>) <span style="font-size:11px">▼</span></a> |
-						<a href="#" onclick="showQueryHints(this);return false;" title="Choose indexes will be used in query">Hints(<span id="query_hints_count"><?php h(count($queryHints));?></span>)  <span style="font-size:11px">▼</span></a> |
+						<a href="#" onclick="showQueryFields(this);return false;" title="Choose fields to display">
+							Fields(<span id="query_fields_count"><?php h(count($queryFields));?></span>)
+							<span style="font-size:11px">▼</span>
+						</a> |
+						<a href="#" onclick="showQueryHints(this);return false;" title="Choose indexes will be used in query">
+							Hints(<span id="query_hints_count"><?php h(count($queryHints));?></span>)
+							<span style="font-size:11px">▼</span>
+						</a> |
 					<?php endif; ?>
 					</span>
 					<!-- end query fields and hints -->
 
-					<label id="limitLabel" <?php if (x("command") !="findAll"):?>style="display:none"<?php endif;?>><?php hm("limit"); ?>:<input type="text" name="limit" size="5" value="<?php h(xi("limit"));?>"/> |</label>
+					<label id="limitLabel" <?php if (x("command") !="findAll"):?>style="display:none"<?php endif;?>><?php hm("limit"); ?>: <input type="text" name="limit" size="5" value="<?php h(xi("limit"));?>"/> |</label>
 					<span id="pageSetLabel" <?php if (x("command") !="findAll"):?>style="display:none"<?php endif;?>>
 					<select name="pagesize" title="<?php hm("rows_per_page"); ?>">
 					<?php foreach (array(10, 15, 20, 30, 50, 100, 200) as $pagesize):?>
 						<option value="<?php h($pagesize);?>" <?php if(x("pagesize")==$pagesize):?>selected="selected"<?php endif;?>>Rows:<?php h($pagesize);?></option>
 					<?php endforeach;?>
 					</select> |</span>
-					<?php hm("action"); ?>:
 					<select name="command" onchange="changeCommand(this)">
 						<option value="findAll" <?php if(x("command")=="findAll"):?>selected="selected"<?php endif;?>>findAll</option>
 						<option value="remove" <?php if(x("command")=="remove"):?>selected="selected"<?php endif;?>>remove</option>
