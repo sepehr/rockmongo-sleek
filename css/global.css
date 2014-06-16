@@ -435,3 +435,10 @@ h3 a,
  a.field-list-trigger span {
   color: #000 !important;
  }
+ .field-list-count {
+  font-size: 11px;
+ }
+ .query_fields_count,
+ .query_hints_count {
+  color: #777 !important;
+ }
