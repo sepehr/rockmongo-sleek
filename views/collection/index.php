@@ -42,6 +42,7 @@
 						<textarea name="newobj" rows="5" cols="70"><?php h(x("newobj"));?></textarea>
 					</div>
 				</td>
+
 				<td valign="top" class="field_orders">
 					<!-- fields will be used in sorting -->
 					<p><input type="text" name="field[]" value="<?php h(rock_array_get(x("field"),0));?>" /> <select name="order[]"><option value="asc" <?php if (rock_array_get(x("order"),0)=="asc"):?>selected="selected"<?php endif;?>>ASC</option><option value="desc" <?php if (rock_array_get(x("order"),0)=="desc"):?>selected="selected"<?php endif;?>>DESC</option></select></p>
@@ -50,6 +51,7 @@
 					<p><input type="text" name="field[]" value="<?php h_escape(rock_array_get(x("field"),3));?>" /> <select name="order[]"><option value="asc" <?php if (rock_array_get(x("order"),3)=="asc"):?>selected="selected"<?php endif;?>>ASC</option><option value="desc" <?php if (rock_array_get(x("order"),3)=="desc"):?>selected="selected"<?php endif;?>>DESC</option></select> </p>
 				</td>
 			</tr>
+
 			<tr>
 				<td colspan="2">
 					<!-- query fields and hints -->
@@ -77,6 +79,7 @@
 					<br/><br/>
 				</td>
 			</tr>
+
 			<tr>
 				<td colspan="2">
 					<input type="submit" value="<?php hm("submit_query"); ?>"/>
@@ -100,6 +103,7 @@
 			<?php endforeach; ?>
 			</ul>
 		</div>
+
 		<div id="query_hints_list" class="fieldsmenu">
 			<div align="right" style="padding-right:10px;background:#999"><a href="#" onclick="closeQueryHints();return false;" title="Click to close"><img src="<?php render_theme_path() ?>/images/accept.png" width="14"/></a></div>
 			<ul class="code">
@@ -109,6 +113,7 @@
 			</ul>
 		</div>
 		<!-- end float divs -->
+
 	</form>
 </div>
 
@@ -120,12 +125,14 @@
 		<?php else:?>
 			<p>No records is found.</p>
 		<?php endif;?>
+
 	<?php else: ?>
 		<p class="page"><?php h($page); ?> (<?php h(min($page->total(), $page->offset()+$page->size()));?>/<?php h($page->total());?>)</p>
 
 		<!-- list all records -->
 		<?php foreach ($rows as $index => $row):?>
 		<div style="border:2px #ccc solid;margin-bottom:5px;" onmouseover="showOperationButtons('<?php h($index);?>')" onmouseout="hideOperationButtons('<?php h($index);?>')" class="record">
+
 			<table width="100%" border="0" id="object_<?php h($index);?>">
 				<tr>
 					<td valign="top" width="50">#<?php echo $page->total() - $page->offset() - $index; ?></td>
