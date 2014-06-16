@@ -59,11 +59,11 @@
 					<?php if(!empty($nativeFields)):?>
 						<a href="#" onclick="showQueryFields(this);return false;" title="Choose fields to display">
 							Fields(<span id="query_fields_count"><?php h(count($queryFields));?></span>)
-							<span style="font-size:11px">▼</span>
+							<span class="icon icon-chevron-down"></span>
 						</a> |
 						<a href="#" onclick="showQueryHints(this);return false;" title="Choose indexes will be used in query">
 							Hints(<span id="query_hints_count"><?php h(count($queryHints));?></span>)
-							<span style="font-size:11px">▼</span>
+							<span class="icon icon-chevron-down"></span>
 						</a> |
 					<?php endif; ?>
 					</span>
