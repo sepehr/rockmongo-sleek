@@ -431,7 +431,7 @@ h3 a,
 .about {
   padding: 20px;
 }
- .field-list-trigger,
- .field-list-trigger span {
-  color: #333 !important;
+ a.field-list-trigger,
+ a.field-list-trigger span {
+  color: #000 !important;
  }
