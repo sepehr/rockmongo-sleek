@@ -444,3 +444,6 @@ h3 a,
  .query_hints_count {
   color: #777 !important;
  }
+ .ui-dialog {
+  min-width: 500px;
+ }
