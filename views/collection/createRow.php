@@ -17,10 +17,10 @@ function switchFormat(select) {
 
 <h3><?php render_navigation($db,$collection,false); ?> &raquo; <?php hm("createrow"); ?></h3>
 
-<?php if (isset($error)):?> 
+<?php if (isset($error)):?>
 <p class="error"><?php h($error);?></p>
 <?php endif; ?>
-<?php if (isset($message)):?> 
+<?php if (isset($message)):?>
 <p class="message"><?php h($message);?></p>
 <?php endif; ?>
 
@@ -30,9 +30,11 @@ function switchFormat(select) {
 <option value="array" <?php if($last_format=="array"): ?>selected="selected"<?php endif; ?>>Array</option>
 <option value="json" <?php if($last_format=="json"): ?>selected="selected"<?php endif; ?>>JSON</option>
 </select>
-<br/>
+<br/><br/>
 <?php hm("data"); ?>
 <br/>
-<textarea rows="35" cols="70" name="data" id="row_data"><?php echo x("data") ?></textarea><br/>
+<textarea rows="15" cols="70" name="data" id="row_data"><?php echo x("data") ?></textarea><br/>
+<br/><br/>
 <input type="submit" value="<?php hm("save"); ?>"/>
+<br/><br/>
 </form>
