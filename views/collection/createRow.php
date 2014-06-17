@@ -25,16 +25,18 @@ function switchFormat(select) {
 <?php endif; ?>
 
 <form method="post">
-<?php hm("format"); ?>:<br/>
-<select name="format" onchange="switchFormat(this)">
-<option value="array" <?php if($last_format=="array"): ?>selected="selected"<?php endif; ?>>Array</option>
-<option value="json" <?php if($last_format=="json"): ?>selected="selected"<?php endif; ?>>JSON</option>
-</select>
-<br/><br/>
-<?php hm("data"); ?>
-<br/>
-<textarea rows="15" cols="70" name="data" id="row_data"><?php echo x("data") ?></textarea><br/>
-<br/><br/>
-<input type="submit" value="<?php hm("save"); ?>"/>
-<br/><br/>
+	<?php hm("format"); ?>:<br/>
+	<select name="format" onchange="switchFormat(this)">
+		<option value="array" <?php if($last_format=="array"): ?>selected="selected"<?php endif; ?>>Array</option>
+		<option value="json" <?php if($last_format=="json"): ?>selected="selected"<?php endif; ?>>JSON</option>
+	</select>
+	<br/><br/>
+
+	<?php hm("data"); ?>
+	<br/>
+	<textarea rows="15" cols="70" name="data" id="row_data"><?php echo x("data") ?></textarea><br/>
+	<br/>
+
+	<input type="submit" value="<?php hm("save"); ?>"/>
+	<br/><br/>
 </form>
