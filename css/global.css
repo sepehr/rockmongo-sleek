@@ -279,8 +279,8 @@ table th {
 textarea,
 .record_row,
 .record_row * {
-	font: 12px Consolas, Bitstream Vera Sans Mono, monospace !important;
-	font-style: italic !important;
+	font: 13px Monaco, Consolas, Bitstream Vera Sans Mono, monospace !important;
+	/*font-style: italic !important;*/
 	line-height: 18px !important;
 }
 .record tr > td[width="50"] {
