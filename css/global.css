@@ -283,6 +283,9 @@ textarea,
 	/*font-style: italic !important;*/
 	line-height: 18px !important;
 }
+.record_row .field {
+	color: #888;
+}
 .record tr > td[width="50"] {
 	color: #efefef;
 	font-family: Aller, Georgia, sans-serif;
