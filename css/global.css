@@ -387,7 +387,9 @@ h3,
   margin-bottom: 0;
   border-bottom: 1px solid #ccc;
 }
+h3,
 h3 a,
+#breadcrumb-trail,
 #breadcrumb-trail a {
   font-size: 13px;
 }
