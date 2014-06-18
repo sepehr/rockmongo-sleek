@@ -186,9 +186,10 @@ img {
 #field_menu {
 	background: #efefef !important;
 	border: 1px solid #fafafa !important;
-	box-shadow: 0 1px 1px #aaa;
+	box-shadow: 0 1px 1px #888;
 	margin-top: 5px !important;
-	padding: 0 !important;
+	padding: 5px !important;
+	border-radius: 5px;
 }
 .menu a,
 .manual a,
