@@ -28,6 +28,10 @@ function r_show_more_options(btn) {
 	}
 	return false;
 }
+
+$(document).ready(function() {
+	$('body').addClass('login-page');
+});
 </script>
 
 <div id="login-form-wrapper" style="padding:10px;margin:200px auto;width:300px;border:1px #ccc solid">
