@@ -26,13 +26,13 @@
 <?php endforeach; ?>
 
 <?php if(!empty($top)):?>
- 	<tr bgcolor="#cfffff">
-		<td colspan="2">{top:1}</td>
+ 	<tr bgcolor="#efefef">
+		<td colspan="2" class="code">{top:1}</td>
 	</tr>
 	<?php foreach ($top as $name => $stat):?>
 		<tr bgcolor="#ffffff">
-			<td width="150" bgcolor="#fffeee" valign="top"><?php h($name);?></td>
-			<td><?php
+			<td width="150" bgcolor="#fffeee" valign="top" class="code"><?php h($name);?></td>
+			<td class="code"><?php
 				h($stat);
 				?></td>
 		</tr>
