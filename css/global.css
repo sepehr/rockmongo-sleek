@@ -458,3 +458,6 @@ body.login-page .select_hosts {
  .ui-dialog {
 	min-width: 530px;
  }
+.content-wrapper {
+	padding: 10px 3px;
+}
