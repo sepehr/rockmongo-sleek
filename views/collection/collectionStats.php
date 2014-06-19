@@ -2,8 +2,9 @@
 
 <table bgcolor="#cccccc" width="600" class="table-main" cellpadding="2" cellspacing="1">
 	<tr bgcolor="#cfffff">
-		<td colspan="2">db.<?php h($collection); ?>.stats()</td>
+		<th colspan="2" class="code">db.<?php h($collection); ?>.stats()</th>
 	</tr>
+
 <?php foreach ($stats as $name => $stat):?>
 	<tr bgcolor="#ffffff">
 		<td width="150" bgcolor="#fffeee" valign="top"><?php h($name);?></td>
@@ -20,6 +21,7 @@
 			?></td>
 	</tr>
 <?php endforeach; ?>
+
 <?php if(!empty($top)):?>
  	<tr bgcolor="#cfffff">
 		<td colspan="2">{top:1}</td>
