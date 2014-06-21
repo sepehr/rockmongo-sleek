@@ -29,6 +29,7 @@
  	<tr bgcolor="#efefef">
 		<td colspan="2" class="code">{top:1}</td>
 	</tr>
+
 	<?php foreach ($top as $name => $stat):?>
 		<tr bgcolor="#ffffff">
 			<td width="150" bgcolor="#fffeee" valign="top" class="code"><?php h($name);?></td>
@@ -37,6 +38,7 @@
 				?></td>
 		</tr>
 	<?php endforeach; ?>
+
 <?php endif;?>
 </table>
 </div>
