@@ -28,7 +28,7 @@ window.parent.frames["left"].location.reload();
 
 <form method="post" enctype="multipart/form-data">
 <input type="hidden" name="format" value="json"/>
-Import to collection name:<input type="text" name="collection"/><br/>
+Import to collection name:<input type="text" name="collection"/><br/><br/>
 <input type="file" style="width:400px" name="json"/><br/><br/>
 <input type="submit" value="<?php hm("import"); ?>"/>
 </form>
